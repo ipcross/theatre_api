@@ -1,7 +1,5 @@
 RSpec.describe Spectacle, type: :model do
   subject(:spectacle) { create(:spectacle) }
-  context "Assosiations" do
-  end
 
   context "Validations" do
     it { should validate_presence_of :name }

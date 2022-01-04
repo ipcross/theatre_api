@@ -1,0 +1,12 @@
+defaults: &defaults
+
+development:
+  <<: *defaults
+  ACCESS_API_TOKEN: '123456'
+
+production:
+  <<: *defaults
+
+test:
+  <<: *defaults
+  ACCESS_API_TOKEN: 'test_access_api_token'
