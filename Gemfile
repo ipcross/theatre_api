@@ -6,8 +6,9 @@ ruby '2.6.1'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.3'
 # Use sqlite3 as the database for Active Record
-gem 'pg'
 gem 'sqlite3', '~> 1.4'
+
+gem 'pg'
 # Use Puma as the app server
 gem 'puma', '~> 4.1'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
@@ -27,15 +28,19 @@ gem 'bootsnap', '>= 1.4.2', require: false
 # gem 'rack-cors'
 
 group :development, :test do
+  gem 'awesome_rails_console'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
-  gem 'factory_girl_rails'
+  gem 'database_cleaner'
+  gem 'factory_bot_rails'
   gem 'guard'
   gem 'guard-bundler'
   gem 'guard-rspec'
   gem 'guard-rubocop'
-  gem 'rspec-rails', '~> 3.5'
-  gem 'simplecov'
+  gem 'rails-controller-testing'
+  gem 'rb-readline'
+  gem 'rspec-rails'
+  gem 'simplecov', require: false
 end
 
 group :development do
@@ -47,6 +52,7 @@ end
 
 group :test do
   gem 'fuubar'
+  gem 'shoulda-matchers', git: 'https://github.com/thoughtbot/shoulda-matchers.git', branch: 'rails-5'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
