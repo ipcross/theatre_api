@@ -27,6 +27,12 @@
 /storage/*
 !/storage/.keep
 .byebug_history
+dump.rdb
+database.yml
+application.yml
+secrets.yml
+*playbook.retry
+erd.pdf
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
